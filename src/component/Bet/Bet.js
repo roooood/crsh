@@ -312,7 +312,7 @@ class Bet extends React.Component {
                     <li className={"tab-link " + (this.state.tab == 1 ? 'current' : '')} onClick={() => this.tab(1)}>{t('manual')}</li>
                     <li className={"tab-link " + (this.state.tab == 2 ? 'current' : '')} onClick={() => this.tab(2)}>{t('auto')}</li>
                 </ul>
-                <section className={"tab-content " + (this.state.tab == 1 ? 'current' : '')}>
+                <section style={this.context.state.isMobile ? { flex: .6 } : {}} className={"tab-content " + (this.state.tab == 1 ? 'current' : '')}>
                     <div className="row" style={{ alignItems: 'flex-end' }}>
                         <div className="col" style={{ flex: 1 }}>
                             <div className="label">{t('amount')}</div>
@@ -357,7 +357,7 @@ class Bet extends React.Component {
                         {this.context.state.balance ? this.context.state.balance == -1 ? '-' : F.toMoney(this.context.state.balance) : 0}
                     </div>
                 </section>
-                <section className={"auto tab-content " + (this.state.tab == 2 ? 'current' : '')}>
+                <section style={this.context.state.isMobile ? { flex: .6 } : {}} className={"auto tab-content " + (this.state.tab == 2 ? 'current' : '')}>
                     <div className="row">
                         <div className="col" >
                             <div className="label">{t('autoAmount')}</div>
@@ -433,7 +433,7 @@ class Bet extends React.Component {
                     </div>
                 </section>
 
-                <div className="row center"  >
+                <div style={this.context.state.isMobile ? { flex: .3 } : {}} className="row center"  >
                     {this.context.state.balance == -1
                         ? this.renderSign()
                         : this.renderBtn()

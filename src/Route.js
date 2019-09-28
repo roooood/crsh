@@ -53,7 +53,7 @@ const StyledTab = withStyles(theme => ({
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
     return (
-        <Typography style={{ height: '93%' }} component="div" role="tabpanel" hidden={value !== index} {...other}>
+        <Typography style={{ height: '80%' }} component="div" role="tabpanel" hidden={value !== index} {...other}>
             {children}
         </Typography>
     );

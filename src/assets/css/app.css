@@ -81,8 +81,16 @@ body {
   position: relative;
   padding:10px;
 }
+.is-mobile .chart{
+  flex-direction: row-reverse;
+}
 .point{
   margin: 0;
+}
+.is-mobile .point{
+  height:100%;
+  width:auto;
+  flex-direction: column;
 }
 .point .col{
   cursor: pointer;
@@ -102,16 +110,14 @@ body {
   text-align: center;
   font-family:Arial;
   font-weight: bold;
-  color:#f523c6;
-   background: linear-gradient(to right, #30CFD0 0%, #f523c6  100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color:#3875bb;
 }
 
 .crashed {
   width:100%;
   font-family: IRANSemi;
   font-size: 25px;
+  color:#ca38a6;
 }
 
 .table {
@@ -280,6 +286,7 @@ ul.tabs li.current{
 .tab-content{
   display: none;
   flex: 1;
+  justify-content: space-around;
 }
 
 .tab-content.current{

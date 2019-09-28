@@ -104,6 +104,8 @@
 }
 .bet .tab-content{
   padding:0 10px;
+  justify-content: space-around;
+
 }
 
 .huIoFA{

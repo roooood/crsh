@@ -76,9 +76,12 @@ class Chart extends React.Component {
         this.setState({ counting: timer })
     }
     componentDidMount() {
-        xwidth = document.querySelector(".pchart").clientWidth;
-        xheight = document.querySelector(".pchart").clientHeight;
-
+        let p = document.querySelector(".pchart");
+        xwidth = p.clientWidth;
+        xheight = p.clientHeight;
+        if (this.context.state.isMobile) {
+            xwidth -= 60;
+        }
         this.context.game.register('timer', this.countDown);
         this.context.game.register('c', this.calculate);
 

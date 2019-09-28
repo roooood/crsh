@@ -1,7 +1,7 @@
 import * as Colyseus from "colyseus.js";
 class Game {
     constructor() {
-        this.Socket = (window.location.protocol === 'https:' ? 'wss' : 'ws') + '://localhost:2657';
+        this.Socket = (window.location.protocol === 'https:' ? 'wss' : 'ws') + '://192.168.2.103:2657';
         this.Client = null;
         this.Room = null;
         this.isConnect = false;
