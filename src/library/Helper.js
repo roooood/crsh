@@ -1,3 +1,4 @@
+import BigNumber from 'bignumber.js';
 
 export function getOffset(el) {
     const rect = el.getBoundingClientRect();
@@ -38,13 +39,10 @@ export function sum(arr, prop) {
     return total
 }
 export function add(a, b) {
-    let p = 1000000;
     if (a < 1 || b < 1) {
-        a = (a + "").substr(0, 8);
-        b = (b + "").substr(0, 8);
-        a = Number(a) * p;
-        b = Number(b) * p;
-        return (a + b) / p;
+        let c = new BigNumber(a);
+        let f = b < 0 ? c.minus(-1 * b) : c.plus(b);
+        return f.toNumber();
     }
     return (a + b);
 }

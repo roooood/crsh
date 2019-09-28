@@ -3,7 +3,6 @@ import Context from './library/Context';
 import autoBind from 'react-autobind';
 import SwipeableViews from 'react-swipeable-views';
 import Chart from './component/Chart/Chart';
-import Gift from './component/Gift/Gift';
 import Bet from './component/Bet/Bet';
 import Info from './component/Info';
 import List from './component/List/List';
@@ -53,7 +52,7 @@ const StyledTab = withStyles(theme => ({
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
     return (
-        <Typography style={{ height: '80%' }} component="div" role="tabpanel" hidden={value !== index} {...other}>
+        <Typography style={{ height: '93%' }} component="div" role="tabpanel" hidden={value !== index} {...other}>
             {children}
         </Typography>
     );

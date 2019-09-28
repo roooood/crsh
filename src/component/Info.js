@@ -12,6 +12,7 @@ class Info extends React.Component {
             start: 0,
             end: 'balance' in context.state ? context.state.balance : 0
         };
+        this.back = F.getQuery('ref');
     }
     componentWillReceiveProps(any, nextProps) {
         if ('balance' in nextProps.state) {
@@ -45,6 +46,9 @@ class Info extends React.Component {
                             <div className="label" style={{}}>{t('myBalance')}</div>
                         </div>
                     </div>
+                    {this.back &&
+                        <a href={this.back} className="back">{t('return')}</a>
+                    }
                 </div>
                 <div className="row" >
                     <div className="col">

@@ -2,18 +2,7 @@
   flex-direction:row-reverse;
   padding:3px;
 }
-.back{
-  position: absolute;
-  left: -2px;
-  top: -15px;
-  text-decoration: none;
-  color: #fff;
-  background: #29243f;
-  padding: 5px 20px;
-  border-bottom-right-radius: 20px;
-  font-size: 14px;
-  z-index: 99999;
-}
+
 .gift .col{
   display:flex;
   flex:1;
